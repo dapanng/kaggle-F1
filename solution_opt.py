@@ -626,8 +626,8 @@ log(f"  Elapsed: {(time.time()-t0):.0f}s")
 
 sub = pd.read_csv('playground-series-s6e5/sample_submission.csv')
 sub['PitNextLap'] = final_test
-sub.to_csv('submission_v8.csv', index=False)
-log(f"\nSaved: submission_v8.csv")
+sub.to_csv('submission.csv', index=False)
+log(f"\nSaved: submission.csv")
 
 # Save OOF and test predictions
 for c in cfg_names:
