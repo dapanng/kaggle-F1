@@ -20,7 +20,6 @@
 - [Feature Engineering](#feature-engineering)
 - [Model Architecture](#model-architecture)
 - [Ensemble Strategy](#ensemble-strategy)
-- [Getting Started](#getting-started)
 - [Key Parameters](#key-parameters)
 - [Output Files](#output-files)
 
@@ -192,37 +191,6 @@ Two methods are tried in parallel; the one with higher OOF AUC is selected:
 | **Ridge Stacking** | 6 OOF vectors as features → 5-fold Ridge → search `alpha ∈ {1, 10, 50, 100, 200, 500, 1000}` |
 
 Final predictions are clipped to `[0.001, 0.999]`.
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- Python >= 3.8
-- numpy, pandas, scikit-learn, lightgbm, xgboost, catboost, scipy
-
-### Install
-
-```bash
-pip install numpy pandas scikit-learn lightgbm xgboost catboost scipy
-```
-
-> **Note**: `cat_gpu` requires a GPU environment with the corresponding CatBoost version. If no GPU is available, change `task_type` to `'CPU'`.
-
-### Download Data
-
-Download `train.csv`, `test.csv`, `sample_submission.csv` from the [Kaggle competition page](https://www.kaggle.com/competitions/playground-series-s6e5) and place them under `playground-series-s6e5/`.
-
-### Run
-
-```bash
-# Main solution
-python solution_optimized_v8.py
-
-# Feature importance analysis
-python feature_importance.py
-```
 
 ---
 
