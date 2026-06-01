@@ -209,7 +209,7 @@ Final predictions are clipped to `[0.001, 0.999]`.
 
 ## Output Files
 
-Running `solution_v2.py` generates:
+Running `solution_opt.py` generates:
 
 | File | Description |
 |------|-------------|
