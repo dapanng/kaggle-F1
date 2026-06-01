@@ -1,17 +1,3 @@
-"""
-V8: Focused optimization for LB > 0.953
-Key insights from feature importance analysis:
-  - Top features: Dev_race_laptime, Driver_Race_te, LTD_abs, Dev_drv_pos
-  - Bottom features: TL_gt_* thresholds, Is_* booleans (near-zero importance)
-  - OOF-LB gap is small (~0.0004), need to push OOF higher
-Strategy:
-  1. Remove low-importance features, add high-value new ones
-  2. More TE combinations (Driver_Compound, Race_Stint, etc.)
-  3. Compound-specific TyreLife deviation features
-  4. 4 diverse model configs × 3 seeds
-  5. Ridge stacking meta-learner
-  6. GroupKFold by Race for validation (reduce overfitting to race patterns)
-"""
 import sys, time, warnings, gc, json
 import pandas as pd, numpy as np
 from sklearn.model_selection import StratifiedKFold, GroupKFold
