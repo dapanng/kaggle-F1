@@ -209,11 +209,11 @@ Final predictions are clipped to `[0.001, 0.999]`.
 
 ## Output Files
 
-Running `solution_optimized_v8.py` generates:
+Running `solution_v2.py` generates:
 
 | File | Description |
 |------|-------------|
-| `submission_v8.csv` | Final submission file |
-| `oof_{config}_v8.npy` | OOF predictions per model config (×6) |
-| `test_{config}_v8.npy` | Test predictions per model config (×6) |
-| `experiment_v8.json` | Experiment log (per-model AUC, final method, elapsed time, etc.) |
+| `submission.csv` | Final submission file |
+| `oof_{config}.npy` | OOF predictions per model config (×6) |
+| `test_{config}.npy` | Test predictions per model config (×6) |
+| `experiment.json` | Experiment log (per-model AUC, final method, elapsed time, etc.) |
